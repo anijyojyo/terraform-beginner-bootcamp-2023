@@ -179,3 +179,5 @@ If it is successful you should see a json payload return that looks like this :
 ```
 
 We will need to generate AWS credentials from IAM user in order to use the AWS CLI.
+
+[IAM user creation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
