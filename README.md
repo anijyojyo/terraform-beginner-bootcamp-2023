@@ -181,3 +181,63 @@ If it is successful you should see a json payload return that looks like this :
 We will need to generate AWS credentials from IAM user in order to use the AWS CLI.
 
 [IAM user creation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+
+
+## Terraform Basics
+
+
+### Terraform Registry
+
+Terraform sources their providers and modules from the Terraform Registry which is located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** are interface to APIs that will allow you to create resources in terraform.
+
+- **Modules** are a wa to make large amount of terraform code modular, portable and sharable.
+
+[Random Terraform Providers](https://registry.terraform.io/providers)
+
+### Terraform Console
+
+We can see list of all the Terraform commands by simply typing `terraform`
+
+#### Terraform Init
+
+At the start of a new terraform project we will run `terraform init` to to donwload the binaries for the terraform providers that we will use in this project.
+
+#### Terraform Plan
+
+`terrafor plan`
+
+This will generate out a changeset , about the state of our infrastructure and what will be changed.
+
+We can output this changeset i.e., "plan" to be passed to an apply, but often you can just ignore outputting.
+
+#### Terraform Apply 
+
+`terraform apply`
+
+This will run a plan and pass the changeset to be executed by terraform. Apply should prompt yes or no.
+
+If we want to automatically approve we can provide the auto approve flag e.g., `terraform apply --auto-approve`.
+
+### Terraform Lock Files
+
+`terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project.
+
+The terraform lock file **should be committed** to your Version Control System (VSC) e.g., Github.
+
+### Terraform State Files
+
+`terraform.tfstate` contains information about the current state of your infrastructure.
+
+This file **should not be committed** to your VSC.
+
+This file can contain sensitive data.
+
+If you lose this file , you will lose knowing the state of your infrastructure.
+
+`terraform.tfstate.backup` is the file of previous state.
+
+### Terraform Directory
+
+`.terraform` directory contains binaries of terraform providers.
