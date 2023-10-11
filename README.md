@@ -262,3 +262,4 @@ https://app.terraform.io/app/settings/tokens?source=terraform-login
 ```
 
 
+We have automated the workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
