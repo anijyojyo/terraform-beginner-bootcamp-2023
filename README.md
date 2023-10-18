@@ -4,7 +4,7 @@
 
 ## Weekly Journals
 - [Week 0 Journal](Journal/Week0.md)
-
+- [Week 1 Journal](Journal/Week1.md)
 ## Extras
 
 - [Github Markdwn TOC Generator](https://derlin.github.io/bitdowntoc/)
