@@ -1,6 +1,20 @@
 # Terraform Beginner Bootcamp 2023
 
-## Semantic Versioning :mage:
+## Table of Contents
+
+- [Semantic Versioning](#semantic-versioning)
+
+- [Install the Terraform CLI] (#install-the-terraform-cli)
+    -   [Considerations with the Terraform CLI changes]
+        (#considerations-with-the-terraform-cli-changes)
+-   [AWS CLI Installation]
+-   [Terraform Basics]
+-   [Terraform Basics]
+-   [Issues with Terraform Cloud Login and Gitpod Workspace]
+
+## Semantic Versioning
+
+
 
 This project is going to utilize semantic versioning for its tagging.
 [semver.org](https://semver.org/)
@@ -14,7 +28,7 @@ The general format :
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 
-##Considerations with the Terraform CLI changes
+## Considerations with the Terraform CLI changes
 
 The terraform installation instructions have changed due to gpg keyring changes.
 So we needed to refer to the latest install CLI instructions via Terraform Documentation and
@@ -48,7 +62,7 @@ UBUNTU_CODENAME=jammy
 ```
 
 
-###Refactoring into Bash Scripts
+### Refactoring into Bash Scripts
 
 While fixing the Terraform CLI gpg depreciation issues we noticed that bash scripts steps were a 
 considerable amount of more code. So we decided to create a bash script, to install a Terraform CLI.
@@ -59,7 +73,7 @@ This bash script is located here :[./bin/install_terraform_cli.sh](./bin/install
 -   This allows us an easier time to debug and execute manually Terraform CLI install
 -   This will allow better portability with other projects that need to install Terraform CLI.
 
-###Shebang
+### Shebang
 
 A Shebang ( pronounced as Sha-bang) tells the bash script what program that will interpret the script e.g. `#!/usr/bin/env bash`
 
